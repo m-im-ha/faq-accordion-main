@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/m-im-ha/faq-accordion-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://github.com/m-im-ha/faq-accordion-main)
+- Live Site URL: [live site URL](https://faq-accordion-main-ecru-xi.vercel.app/)
 
 ### Built with
 
