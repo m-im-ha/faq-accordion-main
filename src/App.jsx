@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+import src from "./assets/images/icon-star.svg";
+import plus from "./assets/images/icon-plus.svg";
+import minus from "./assets/images/icon-minus.svg";
+
 const faqs = [
   {
     title: "What is Frontend Mentor, and how will it help me?",
@@ -20,18 +24,21 @@ const faqs = [
 ];
 function App() {
   return (
-    <div className="xx">
-      <h1>Faqs</h1>
+    <section className="accordion_container">
       <Accordion data={faqs} />
-    </div>
+    </section>
   );
 }
 
 function Accordion({ data }) {
-  const [curOpen, setCurOpen] = useState(null);
+  const [curOpen, setCurOpen] = useState(0);
 
   return (
-    <div>
+    <div className="accordion_content">
+      <div className="faq_icon_container">
+        <img src={src} alt="" />
+        <h1>FAQs</h1>
+      </div>
       {data.map((faq, i) => (
         <AccordionItem
           curOpen={curOpen}
@@ -54,10 +61,10 @@ function AccordionItem({ title, text, curOpen, onOpen, num }) {
   }
 
   return (
-    <div onClick={handleClick}>
-      <div className="title_btn">
-        <h2>{title}</h2>
-        <button>{isOpen ? "-" : "+"}</button>
+    <div className="faq_container" onClick={handleClick}>
+      <div className="faq_box">
+        <h3>{title}</h3>
+        <button>{isOpen ? <img src={minus} alt="" /> : <img src={plus}/>}</button>
       </div>
       <p>{isOpen && text}</p>
     </div>
