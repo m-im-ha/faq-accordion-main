@@ -26,6 +26,13 @@ function App() {
   return (
     <section className="accordion_container">
       <Accordion data={faqs} />
+      <p className="attribution">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by <a href="https://www.frontendmentor.io/profile/m-im-ha">Md Imran Hossen Akash</a>.
+      </p>
     </section>
   );
 }
@@ -64,7 +71,9 @@ function AccordionItem({ title, text, curOpen, onOpen, num }) {
     <div className="faq_container" onClick={handleClick}>
       <div className="faq_box">
         <h3>{title}</h3>
-        <button>{isOpen ? <img src={minus} alt="" /> : <img src={plus}/>}</button>
+        <button>
+          {isOpen ? <img src={minus} alt="" /> : <img src={plus} />}
+        </button>
       </div>
       <p>{isOpen && text}</p>
     </div>
